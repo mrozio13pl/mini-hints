@@ -1,0 +1,27 @@
+{
+  "name": "mini-hints",
+  "version": "1.0.0",
+  "description": "A better looking logs ✨",
+  "main": "./lib/index.js",
+  "scripts": {
+    "start": "node ./lib/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrozio13pl/mini-hints.git"
+  },
+  "keywords": [
+    "logger",
+    "logging",
+    "logs",
+    "hints",
+    "better-logs",
+    "prettier-logs",
+    "tools"
+  ],
+  "author": "mrozio13pl",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.2"
+  }
+}
