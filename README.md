@@ -40,6 +40,29 @@ logger.log("This is some JSON object:", { foo: { bar: { baz: "qux" } } });
 20:17:31 This is some JSON object <Object(1)> { foo: <Object(1)> { bar: <Object(1)> { baz: qux } } }
 ```
 
+## Defining log functions
+
+```js
+// logger.define('function name', options)
+logger.define("notify", { 
+    label: "notification",
+    color: "blue",
+    prefix: "🔔",
+    replace: false
+});
+logger.notify("This is a notification!");
+```
+
+#### Output:
+```
+23:39:21 🔔 notification This is a notification!
+```
+#### Options (optional)
+- `label`: A string that will be used as the label for the logging function. If not provided, the function name will be used as the label.
+- `color`: A string that specifies the color to be used for the label in the console output. This should be a string that corresponds to one of the color functions provided by **chalk**. This defaults to `gray`.
+- `prefix`: A string that will be displayed before the label in the console output. This defaults to an empty string.
+- `replace`: A boolean value that determines whether the new logging function should replace an existing function with the same name. This defaults to `false`.
+
 ## More examples
 
 ```js
